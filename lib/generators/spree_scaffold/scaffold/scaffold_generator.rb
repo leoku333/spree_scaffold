@@ -33,7 +33,7 @@ module SpreeScaffold
       end
 
       def create_migrations
-        migration_template 'migrations/model.rb', "db/migrate/create_spree_#{plural_name}.rb"
+        migration_template 'migrations/model.rb', "db/migrate/create_#{plural_name}.rb"
 
         if has_attachments?
           migration_template 'migrations/attachments.rb', "db/migrate/create_spree_#{plural_name}_attachments.rb"
