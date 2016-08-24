@@ -9,6 +9,7 @@ module Spree
     friendly_id :slug_candidates, use: [:slugged, :finders]
 
 <% end -%>
+    self.table_name = "<%= singular_name %>" 
 <% if i18n? -%>
     translates <%= options[:i18n].map { |f| ":#{f}" }.join(', ') %>
     include SpreeI18n::Translatable
